@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Super Duper Survey Form</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1 id="title">Winnipeg Liveability Survey Form</h1>
+	</header>
+
+
+	<main>
+		<p id="description">Let us know how we can improve the city of Winnipeg.</p>
+
+		<form id="survey-form">
+			<div class="form-text" id="name-label">
+				Name:
+			</div>
+
+			<div class="input">
+				<input type="text" id="name" name="name" placeholder="Enter you name..." required>
+    		</div>
+
+			<div class="form-text" id="email-label">
+				Email:
+			</div>
+
+			<div class="input">
+				<input type="email" id="email" name="email" placeholder="Enter your email..." required>
+    		</div>
+
+			<div class="form-text" id="number-label">
+				Age:
+			</div>
+
+			<div class="input">
+				<input type="number" id="number" name="age" min="0" max="120">
+    		</div>		
+
+    		<div class="form-text">
+    			What is your occupation?
+			</div>
+
+			<div class="input">
+
+				<select name="occupation" id="dropdown">
+					<option value="" disabled selected>Select your option</option>
+					<option value="unemployed">Unemployed</option>
+					<option value="student">Student</option>
+					<option value="cat_wrangler">Cat wrangler</option>
+					<option value="professional">Professional</option>
+					<option value="Space pirate">Space pirate</option>
+				</select>
+
+    		</div>
+
+    		<div class="form-text">
+				How likely are you to recommend a friend to live in Winnipeg?
+			</div>
+
+			<div class="input">
+
+				<input type="radio" id="not_likely" name="recommend_likeliness">
+			    <label for="not_likely">Not likely</label>
+
+			    <input type="radio" id="likely" name="recommend_likeliness">
+			    <label for="likely">Likely</label>
+
+			    <input type="radio" id="very_likely" name="recommend_likeliness">
+			    <label for="very_likely">Very likely</label>
+
+    		</div>
+
+			<div class="form-text">
+				What do you like the most about Winnipeg?
+			</div>
+
+			<div class="input">
+
+				<select name="like">
+					<option value="" disabled selected>Select your option</option>
+					<option value="cold">The cold</option>
+					<option value="festivals">The festivals</option>
+					<option value="people">The people</option>
+				</select>
+
+    		</div>
+
+    		<div class="form-text">
+    			What do you think could be improved?
+    		</div>
+
+    		<div class="input">
+    			<div>
+	    			<input type="checkbox" id="bus_network" name="bus_network" value="bus_network">
+	    			<label for="bus_network">Bus network</label>
+	    		</div>
+
+    			<div>
+    				<input type="checkbox" id="downtown" name="downtown" value="downtown">
+    				<label for="downtown">Downtown safety</label>
+    			</div>
+
+    			<div>
+    				<input type="checkbox" id="urban_sprawl" name="urban_sprawl" value="urban_sprawl">
+    				<label for="urban_sprawl">Urban sprawl</label>
+    			</div>
+
+    			<div>
+    				<input type="checkbox" id="more_parks" name="more_parks" value="more_parks">
+    				<label for="more_parks">More parks</label>
+    			</div>
+
+    			<div>
+    				<input type="checkbox" id="less_raccoons" name="less_raccoons" value="less_raccoons">
+    				<label for="less_raccoons">Less raccoons</label>
+    			</div>
+
+    			<div>
+    				<input type="checkbox" id="more_cultural_activies" name="more_cultural_activies" value="more_cultural_activies">
+    				<label for="more_cultural_activies">More cultural activies</label>
+    			</div>
+
+    			<div>
+    				<input type="checkbox" id="fare_free_buses" name="fare_free_buses" value="fare_free_buses">
+    				<label for="fare_free_buses">Fare free buses</label>
+    			</div>
+
+    		</div>
+
+    		<div class="form-text">
+    			Lastly, do you have any other comments to make ?
+    		</div>
+
+    		<div class="input">
+				<textarea name="textarea" rows="10" >Write something here...</textarea>
+			</div>	
+
+			<div class="submit">
+				<input type="submit" value="SUBMIT" id="submit">
+			</div>
+
+    	</form>
+
+	</main>
+
+
+
+</body>
+</html>
