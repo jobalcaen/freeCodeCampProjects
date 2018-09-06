@@ -1,0 +1,8 @@
+.drum-box {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+	background-color: brown;
+}

@@ -3,7 +3,7 @@ let HTMLWebpackPlugin = require(
 );
 
 let HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-	template: __dirname + '/src/index.html',
+	template: __dirname + '/public/index.html',
 	filename: 'index.html',
 	inject: 'body'
 });
@@ -12,7 +12,7 @@ let FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 
 module.exports = {
-	entry: __dirname + '/src/index.js',
+	entry: __dirname + '/public/index.js',
 	mode: 'development',
 	module: {
 		rules: [
@@ -48,5 +48,8 @@ module.exports = {
 		// 	statsFilename: 'iconstats.json',
 		//     title: 'Joel Balcaen',
 		// })
-	]
+	],
+	devServer: {
+    	host: '0.0.0.0'
+	}
 };
