@@ -1,13 +1,12 @@
 import React from 'react';
 import DrumButton from '../components/DrumButton';
 import AddDrum from '../components/AddDrum';
+import DrumButtons from '../components/DrumButtons';
+
 
 const Main = () => (
 	<div className='drum-box'>
-		<AddDrum />
-		<div className='button-grid'>
-			Drum buttons
-		</div>
+		<DrumButtons />
 	</div>
 );
 
