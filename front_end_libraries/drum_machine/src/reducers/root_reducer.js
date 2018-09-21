@@ -1,5 +1,4 @@
 import { ADD_DRUM, DELETE_DRUM, RETURN_DRUM_FILEPATH } from '../constants/action-types';
-console.log(drumObjects);
 
 
 const initialState = {

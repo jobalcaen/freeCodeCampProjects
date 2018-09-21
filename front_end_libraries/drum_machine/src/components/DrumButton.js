@@ -26,16 +26,16 @@ class DrumButton extends Component {
 		console.log('drum button props: ', this.props);
 		return (
 			<div className="drum-button">
-				{this.props.title}
+				{this.props.title ? this.props.title : this.props.name }
 				<DeleteDrum id={this.props.id}/>
 				<span onClick={this.handleDrumPlay}>play</span>
 		    	{
 		    		this.state.drumHit ? <Sound
-				      url={this.props.sound}
+				      url={this.props.path}
 				      playStatus={Sound.status.PLAYING}
 				      onFinishedPlaying={this.handleDrumStop}
 				    /> : <Sound
-				      url={this.props.sound}
+				      url={this.props.path}
 				      playStatus={Sound.status.STOPPED}
 				    />
 		    	}

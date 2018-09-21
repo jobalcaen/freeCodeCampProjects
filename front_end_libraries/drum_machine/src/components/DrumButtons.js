@@ -7,17 +7,22 @@ const mapStateToProps = state => {
   return { drums: state.drums };
 };
 
+
 const ConnectedDrumButtons = (drums) => {
-	console.log('drums state: ', drums.drums);
+	console.log('drum buttons: ', drums.drums);
+
 	const drumslist = drums.drums.map(drum => {
+		console.log('drum props', drum);
 		return <DrumButton 
 			title={drum.title}
 			id={drum.id}
 			key={drum.id}
-			sound={drum.sound}
+			path={drum.path}
+			name={drum.name}
 		/>
 
 	})
+
 
 	return (
 		<div className='button-grid'>
