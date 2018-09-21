@@ -2,6 +2,8 @@ let HTMLWebpackPlugin = require(
 	'html-webpack-plugin'
 );
 
+
+
 let HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 	template: __dirname + '/public/index.html',
 	filename: 'index.html',
@@ -51,5 +53,8 @@ module.exports = {
 	],
 	devServer: {
     	host: '0.0.0.0'
+	},
+	node: {
+	  fs: 'empty'
 	}
 };

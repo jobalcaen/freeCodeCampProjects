@@ -2,25 +2,43 @@ import React, { Component } from 'react';
 import DeleteDrum from './DeleteDrum';
 import Sound from 'react-sound';
 
-
 class DrumButton extends Component {
 	constructor () {
 		super();
 		this.state = {
-			soundStatus: STOPPED
+			drumHit: false
 		}
+
+		this.handleDrumPlay = this.handleDrumPlay.bind(this);
+		this.handleDrumStop = this.handleDrumStop.bind(this);
+
+	}
+
+	handleDrumPlay() {
+		this.setState({drumHit: true})
+	}
+
+	handleDrumStop() {
+		this.setState({drumHit: false})
 	}
 
 	render () {
+		console.log('drum button props: ', this.props);
 		return (
 			<div className="drum-button">
-				{props.title}
-				<DeleteDrum id={props.id}/>
-		    	<Sound
-			      url="/src/drum_audio/acoustic_hat_02.wav"
-			      playStatus={Sound.status.PLAYING}
-			      onFinishedPlaying={console.log("sound finised")}
-			    />
+				{this.props.title}
+				<DeleteDrum id={this.props.id}/>
+				<span onClick={this.handleDrumPlay}>play</span>
+		    	{
+		    		this.state.drumHit ? <Sound
+				      url={this.props.sound}
+				      playStatus={Sound.status.PLAYING}
+				      onFinishedPlaying={this.handleDrumStop}
+				    /> : <Sound
+				      url={this.props.sound}
+				      playStatus={Sound.status.STOPPED}
+				    />
+		    	}
 			</div>
 		)
 	}

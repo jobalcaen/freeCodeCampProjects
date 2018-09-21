@@ -5,6 +5,9 @@
     margin-left: auto;
     margin-right: auto;
 	background-color: brown;
+    border-radius: 15px;
+    border-color: skyblue;
+    border-style: groove;
 }
 
 .button-grid {
@@ -19,6 +22,7 @@
 	margin: 1em;
 	border-radius: 14px;
     background-color: darkgray;
+    border-style: ridge;
 }
 
 .add-drum-tite-text {

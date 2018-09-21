@@ -9,3 +9,4 @@ export const deleteDrum = id => ({
 	type: DELETE_DRUM,
 	payload: id
 });
+

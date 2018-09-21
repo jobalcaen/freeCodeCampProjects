@@ -35,29 +35,41 @@ class ConnectedAddDrum extends Component {
 	}
 
 	handleFileSelect(event) {
+		console.log('file select: ', event.target.value);
 		this.setState({sound: event.target.value});
 	}
 
 	handleSubmit(event) {
+
 	    event.preventDefault();
 		const { title, id, sound } = this.state;
-		this.props.addDrum({
-			title: title,
-			id: uuidv1(),
-			sound: sound
-		});
-		this.setState({title:""});
+
+		if(sound) {
+			const newDrum = {
+				title: title,
+				id: uuidv1(),
+				sound: sound
+			}
+			this.props.addDrum(newDrum);
+			this.setState({title:"",sound:null});
+		} else {
+			console.log('Select a drum');
+
+		}
+		
 	}
 
 	render() {
 		const drumSoundsList = this.props.drumSounds.map(drum => 
 			<option
 				key={uuidv1()}
-				value={drum.id}
+				value={drum.file}
 			>
 				{drum.name}
 			</option>
 		);
+
+		console.log('drum sounds: ',drumSoundsList);
 
 		return(
 			<div className="drum-button">

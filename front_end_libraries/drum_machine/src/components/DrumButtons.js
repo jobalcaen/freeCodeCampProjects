@@ -14,6 +14,7 @@ const ConnectedDrumButtons = (drums) => {
 			title={drum.title}
 			id={drum.id}
 			key={drum.id}
+			sound={drum.sound}
 		/>
 
 	})

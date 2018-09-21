@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --hot",
     "build": "webpack"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "",
   "dependencies": {
+    "file-system": "^2.2.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
@@ -35,8 +36,10 @@
     "css-loader": "^1.0.0",
     "favicons-webpack-plugin": "0.0.9",
     "file-loader": "^1.1.11",
+    "file-system": "^2.2.2",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.9.3",
+    "react-hot-loader": "^4.3.10",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.22.1",
     "url-loader": "^1.1.1",
